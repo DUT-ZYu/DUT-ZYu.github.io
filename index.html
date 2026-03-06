@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contrastive Parameter Disentanglement for Multi-modal Remote Sensing Image Generation</title>
 
-  <!-- 引入 Google 字体和 CSS 样式 -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
@@ -26,82 +25,32 @@
 </head>
 <body>
 
-<!-- 导航栏 (如果不需要可以删掉 entire nav block) -->
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="#">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-    </div>
-  </div>
-</nav>
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           
-          <!-- ❗修改这里：大标题 -->
+          <!-- 标题 -->
           <h1 class="title is-1 publication-title">Contrastive Parameter Disentanglement for Multi-modal Remote Sensing Image Generation</h1>
-          
-          <!-- ❗修改这里：作者名字 -->
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="#">First Author</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="#">Second Author</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="#">Third Author</a><sup>1</sup>
-            </span>
-          </div>
+        
 
-          <!-- ❗修改这里：机构 -->
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University Name,</span>
-            <span class="author-block"><sup>2</sup>Other Affiliation</span>
-          </div>
-
-          <!-- 按钮链接部分 -->
+          <!-- 链接按钮 -->
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
                 <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
-                </a>
-              </span>
-              <!-- arXiv Link. -->
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
                 </a>
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
+                <a href="https://github.com/DUT-ZYu/CPD-MMRS" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
                   <span>Code</span>
-                  </a>
+                </a>
               </span>
             </div>
           </div>
@@ -111,22 +60,50 @@
   </div>
 </section>
 
-<!-- ❗修改这里：展示图 (Teaser) -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- 建议把你的方法概览图或者效果对比图放在 static/images/ 文件夹下，并重命名为 teaser.jpg -->
-      <!-- 如果还没有图片，这行会显示裂开的图标，上传图片后就会正常 -->
-      <img src="./static/images/teaser.jpg" alt="Teaser Image" style="width: 100%;">
-      
-      <h2 class="subtitle has-text-centered">
-        Figure 1: Overview of the proposed Contrastive Parameter Disentanglement framework.
-      </h2>
+<!-- ======================================================= -->
+<!-- 第一部分：动态展示结果 (放在摘要上方) -->
+<!-- ======================================================= -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Generation Results</h2>
+      <!-- 轮播图开始 -->
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <!-- 第一张展示图 -->
+        <div class="item">
+          <!-- 这里的 result1.jpg 换成你上传的图片名 -->
+          <img src="./static/images/result1.jpg" alt="Result 1" style="width:100%; border-radius:10px;">
+          <p class="has-text-centered">Prompt: A dense residential area...</p>
+        </div>
+
+        <!-- 第二张展示图 -->
+        <div class="item">
+          <!-- 这里的 result2.jpg 换成你上传的图片名 -->
+          <img src="./static/images/result2.jpg" alt="Result 2" style="width:100%; border-radius:10px;">
+          <p class="has-text-centered">Prompt: An airport runway...</p>
+        </div>
+
+        <!-- 第三张展示图 -->
+        <div class="item">
+          <!-- 这里的 result3.jpg 换成你上传的图片名 -->
+          <img src="./static/images/result3.jpg" alt="Result 3" style="width:100%; border-radius:10px;">
+          <p class="has-text-centered">Prompt: A bridge over water...</p>
+        </div>
+
+      </div>
+      <!-- 轮播图结束 -->
+      <p class="content has-text-centered is-size-6">
+        <i>Slide to view more generation results across different modalities.</i>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- 摘要部分 (已保留你的内容) -->
+
+<!-- ======================================================= -->
+<!-- 第二部分：摘要 (Abstract) -->
+<!-- ======================================================= -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -156,34 +133,25 @@
 </section>
 
 
-<!-- 方法部分 (预留位置) -->
+<!-- ======================================================= -->
+<!-- 第三部分：框架图 (放在摘要下方) -->
+<!-- ======================================================= -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Method</h2>
-        <div class="content has-text-justified">
+        <h2 class="title is-3">Method Framework</h2>
+        
+        <!-- 这里的 framework.jpg 换成你上传的框架图文件名 -->
+        <img src="./static/images/teaser.jpg" alt="Framework Architecture" style="width: 100%; margin-top: 20px;">
+        
+        <div class="content has-text-justified" style="margin-top: 15px;">
           <p>
-            You can add more details about your method here. For example, insert the architecture diagram:
+            Figure 2: The overview of our proposed Contrastive Parameter Disentanglement (CPD) framework.
           </p>
-          <!-- <img src="./static/images/method.jpg" alt="Method Overview" style="width: 100%;"> -->
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-<!-- BibTeX 部分 -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{YourName2024Contrastive,
-  author    = {Author One and Author Two and Author Three},
-  title     = {Contrastive Parameter Disentanglement for Multi-modal Remote Sensing Image Generation},
-  journal   = {arXiv preprint},
-  year      = {2024},
-}</code></pre>
   </div>
 </section>
 
@@ -198,10 +166,6 @@
               This website is licensed under a <a rel="license"
                                                   href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
               Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-            <p>
-              Source code adapted from <a
-                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
             </p>
           </div>
         </div>
