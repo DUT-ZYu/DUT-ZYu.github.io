@@ -33,26 +33,24 @@
           
           <!-- 标题 -->
           <h1 class="title is-1 publication-title">Contrastive Parameter Disentanglement for Multi-modal Remote Sensing Image Generation</h1>
-        <!-- ❗修改这里：作者名字 -->
+        <!-- 作者 -->
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="#">Wenda Zhao</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="#">Yu Zhang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="#">Haojun Tang</a><sup>1</sup>
-            </span>
+              <a href="#">Haojun Tang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="#">Haipeng Wang</a><sup>2</sup>
-            </span>
+              <a href="#">Haipeng Wang</a><sup>2</sup>,</span>
             <span class="author-block">
               <a href="#">Huchuan Lu</a><sup>1</sup>
             </span>
           </div>
 
-          <!-- ❗修改这里：机构 -->
+          <!-- 机构 -->
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Dalian University of Technology</span>
+            <span class="author-block"><sup>1</sup>Dalian University of Technology,</span>
             <span class="author-block"><sup>2</sup>Unit 92728 of PLA</span>
           </div>
 
@@ -82,7 +80,7 @@
 </section>
 
 <!-- ======================================================= -->
-<!-- 第一部分：动态展示结果 (放在摘要上方) -->
+<!-- 第一部分：动态展示结果 -->
 <!-- ======================================================= -->
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -93,36 +91,33 @@
         
         <!-- 第一张展示图 -->
         <div class="item">
-          <!-- 这里的 result1.jpg 换成你上传的图片名 -->
           <img src="./static/images/result_01.jpg" alt="Result 1" style="width:100%; border-radius:10px;">
-          <p class="has-text-centered">Prompt: A </p>
+          <!-- 这里的 Caption 你可以根据图片的具体内容修改 -->
+          <p class="has-text-centered">Optical, Infrared, and SAR generation results.</p>
         </div>
 
         <!-- 第二张展示图 -->
         <div class="item">
-          <!-- 这里的 result2.jpg 换成你上传的图片名 -->
           <img src="./static/images/result_02.jpg" alt="Result 2" style="width:100%; border-radius:10px;">
-          <p class="has-text-centered">Prompt: B</p>
+          <p class="has-text-centered">Multi-modal generation from text prompts.</p>
         </div>
 
         <!-- 第三张展示图 -->
         <div class="item">
-          <!-- 这里的 result3.jpg 换成你上传的图片名 -->
           <img src="./static/images/result_03.jpg" alt="Result 3" style="width:100%; border-radius:10px;">
-          <p class="has-text-centered">Prompt: C</p>
+          <p class="has-text-centered">High-quality synthesis of remote sensing scenes.</p>
         </div>
 
         <!-- 第四张展示图 -->
         <div class="item">
-          <!-- 这里的 result3.jpg 换成你上传的图片名 -->
-          <img src="./static/images/result_04.jpg" alt="Result 3" style="width:100%; border-radius:10px;">
-          <p class="has-text-centered">Prompt: D</p>
+          <img src="./static/images/result_04.jpg" alt="Result 4" style="width:100%; border-radius:10px;">
+          <p class="has-text-centered">Structural consistency across modalities.</p>
         </div>
 
       </div>
       <!-- 轮播图结束 -->
       <p class="content has-text-centered is-size-6">
-        <i>Slide to view more generation results across different modalities.</i>
+        <i>Slide to view more generation results across different modalities. Each column represents a generated sample.</i>
       </p>
     </div>
   </div>
@@ -162,7 +157,7 @@
 
 
 <!-- ======================================================= -->
-<!-- 第三部分：框架图 (放在摘要下方) -->
+<!-- 第三部分：Method Framework -->
 <!-- ======================================================= -->
 <section class="section">
   <div class="container is-max-desktop">
@@ -170,12 +165,12 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Method Framework</h2>
         
-        <!-- 这里的 framework.jpg 换成你上传的框架图文件名 -->
         <img src="./static/images/teaser.jpg" alt="Framework Architecture" style="width: 100%; margin-top: 20px;">
         
         <div class="content has-text-justified" style="margin-top: 15px;">
           <p>
-            Figure 2: The overview of our proposed Contrastive Parameter Disentanglement (CPD) framework.
+            <b>Figure 2: The overview of our proposed Contrastive Parameter Disentanglement (CPD) framework.</b>
+            It illustrates how we leverage the LoRA adapter's properties to separate invariant semantics from modality-specific attributes. By constraining the parameter matrices within an orthogonal subspace, we achieve efficient multi-modal generation from a single text prompt.
           </p>
         </div>
       </div>
@@ -183,18 +178,21 @@
   </div>
 </section>
 
+<!-- ======================================================= -->
+<!-- 第四部分：Inference Framework -->
+<!-- ======================================================= -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Inference Framework</h2>
         
-        <!-- 这里的 framework.jpg 换成你上传的框架图文件名 -->
-        <img src="./static/images/4.jpg" alt="Framework Architecture" style="width: 100%; margin-top: 20px;">
+        <img src="./static/images/4.jpg" alt="Inference Framework" style="width: 100%; margin-top: 20px;">
         
         <div class="content has-text-justified" style="margin-top: 15px;">
           <p>
-            Figure 3: The inference framework of our proposed model.
+            <b>Figure 3: The inference framework of our proposed model.</b>
+            The framework integrates the CPD modules into the UNet architecture. To ensure structural alignment across different modalities (Optical, IR, SAR), we employ a <b>Query-Key Structure Transfer (QKST)</b> mechanism. This mechanism injects structural correlation priors from the anchor modality into others during the iterative sampling process.
           </p>
         </div>
       </div>
@@ -202,18 +200,21 @@
   </div>
 </section>
 
+<!-- ======================================================= -->
+<!-- 第五部分：Visualizations Analysis -->
+<!-- ======================================================= -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Visualizations Analysis</h2>
         
-        <!-- 这里的 framework.jpg 换成你上传的框架图文件名 -->
-        <img src="./static/images/3.jpg" alt="Framework Architecture" style="width: 100%; margin-top: 20px;">
+        <img src="./static/images/3.jpg" alt="Visualizations" style="width: 100%; margin-top: 20px;">
         
         <div class="content has-text-justified" style="margin-top: 15px;">
           <p>
-            Figure 4: Visualizations of QK attention activation maps across distinct UNet stages.
+            <b>Figure 4: Visualizations of QK attention activation maps across distinct UNet stages.</b>
+            The heatmaps demonstrate the effectiveness of our structural transfer. As shown in the attention maps (Down, Mid, Up), the model successfully attends to semantically relevant regions (such as lakes and ships) and maintains consistent structural patterns across the generated multi-modal images.
           </p>
         </div>
       </div>
@@ -221,18 +222,21 @@
   </div>
 </section>
 
+<!-- ======================================================= -->
+<!-- 第六部分：Quantitative evaluation -->
+<!-- ======================================================= -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Quantitative evaluation</h2>
         
-        <!-- 这里的 framework.jpg 换成你上传的框架图文件名 -->
-        <img src="./static/images/1.jpg" alt="Framework Architecture" style="width: 100%; margin-top: 20px;">
+        <img src="./static/images/1.jpg" alt="Quantitative evaluation" style="width: 100%; margin-top: 20px;">
         
         <div class="content has-text-justified" style="margin-top: 15px;">
           <p>
-            Table 1: Quantitative evaluation of remote sensing generation results. The best results are bolded and the second-best results are underlined.
+            <b>Table 1: Quantitative evaluation of remote sensing generation results.</b> 
+            We compare our method with state-of-the-art approaches using metrics such as IS, FID, and CLIP-Score (CS) on WHU-OPT-SAR and OSI datasets. The best results are <b>bolded</b> and the second-best results are <u>underlined</u>. Our method demonstrates superior performance in both generation quality and semantic consistency.
           </p>
         </div>
       </div>
@@ -240,17 +244,23 @@
   </div>
 </section>
 
+<!-- ======================================================= -->
+<!-- 第七部分：T-SNE visualization -->
+<!-- ======================================================= -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">T-SNE visualization</h2>
+        <h2 class="title is-3">T-SNE Visualization</h2>
         
-        <!-- 这里的 framework.jpg 换成你上传的框架图文件名 -->
-        <img src="./static/images/2.jpg" alt="Framework Architecture" style="width: 100%; margin-top: 20px;">
+        <img src="./static/images/2.jpg" alt="T-SNE Visualization" style="width: 100%; margin-top: 20px;">
         
         <div class="content has-text-justified" style="margin-top: 15px;">
-  
+          <p>
+             <b>Figure 5: T-SNE visualization of the feature disentanglement.</b>
+             The conventional LoRA optimization paradigm [14] results in severe semantic-
+attribute entanglement. (b) Our proposed DOS paradigm achieves semantics-attribute disentanglement, thus improving the generation quality.
+          </p>
         </div>
       </div>
     </div>
