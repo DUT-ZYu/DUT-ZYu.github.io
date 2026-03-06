@@ -31,11 +31,11 @@ $(document).ready(function() {
 
     var options = {
 			slidesToScroll: 1,
-			slidesToShow: 3,
+			slidesToShow: 4,
 			loop: true,
 			infinite: true,
 			autoplay: true,
-			autoplaySpeed: 3000,
+			autoplaySpeed: 1000,
     }
 
 		// Initialize all div with carousel class
